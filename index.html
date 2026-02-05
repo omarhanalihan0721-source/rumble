@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUMBLE</title>
+    <link rel="stylesheet" href="style-main.css">
+    <link rel="stylesheet" href="style-project.css">
+    <link rel="stylesheet" href="style-robot.css">
+    <link rel="stylesheet" href="style-process.css">
+    <style>
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%; /* Делает фото круглым */
+        }
+        /* Сброс высоты для контейнера с кодом, чтобы фото влезало полностью */
+        .code-body {
+            padding: 0 !important; 
+        }
+         .code-body img {
+            width: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-fixed"></div>
+    <div class="bg-overlay"></div>
+    <div class="nav-container">
+        <nav class="glass-nav">
+            <div class="brand">
+                <span class="icon"></span>
+                <span class="text">RUMBLE</span> </div>
+            <div class="menu">
+                <button class="menu-item active" onclick="openTab('home')">HOME</button>
+                <button class="menu-item" onclick="openTab('project')">PROJECT</button>
+                <button class="menu-item" onclick="openTab('robot')">ROBOT</button>
+                <button class="menu-item" onclick="openTab('process')">PROCESS</button>
+            </div>
+            <button id="themeToggle" class="theme-btn">☀ LAB MODE</button>
+        </nav>
+    </div>
+
+    <main>
+
+        <section id="home" class="tab-content active">
+
+            <div class="hero-header">
+                <div class="container">
+                    <div class="season-badge">SEASON 2026: MASTERPIECE</div>
+                    <h1 class="mega-title">СОЗДАЕМ <br> БУДУЩЕЕ</h1>
+                    <p class="subtitle">Мы объединяем технологии и искусство. Автономный климат-контроль и передовая робототехника.</p>
+                    
+                    <div class="hero-image-box">
+                        <img src="videos/homevideo/team-full.jpg" alt="Фото всей команды" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                </div>
+            </div>
+
+            <div class="container values-block">
+                <h2 class="section-head">CORE VALUES</h2>
+                <div class="values-grid">
+                    <div class="value-card glass-box">
+                        <h3>🔎 ОТКРЫТИЕ</h3>
+                        <p>Мы изучаем новые навыки и идеи.</p>
+                    </div>
+                    <div class="value-card glass-box">
+                        <h3>💡 ИННОВАЦИИ</h3>
+                        <p>Мы используем креативность для решения задач.</p>
+                    </div>
+                    <div class="value-card glass-box">
+                        <h3>🌍 ВЛИЯНИЕ</h3>
+                        <p>Мы применяем то, чему научились, чтобы улучшить мир.</p>
+                    </div>
+                    <div class="value-card glass-box">
+                        <h3>🤝 КОМАНДА</h3>
+                        <p>Мы сильнее, когда работаем вместе.</p>
+                    </div>
+                    <div class="value-card glass-box">
+                        <h3>🤗 ИНКЛЮЗИВНОСТЬ</h3>
+                        <p>Мы уважаем друг друга и принимаем различия.</p>
+                    </div>
+                    <div class="value-card glass-box">
+                        <h3>🎉 ВЕСЕЛЬЕ</h3>
+                        <p>Мы наслаждаемся процессом!</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container team-block">
+                <h2 class="section-head">НАША КОМАНДА</h2>
+                <div class="mentor-display">
+                    <div class="team-card mentor-card">
+                        <div class="avatar">
+                             <img src="videos/homevideo/mentor.jpg" alt="Mentor Photo">
+                        </div>
+                        <div class="info">
+                            <h3>MENTOR</h3> 
+                            <p>Учитель и Наставник</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="members-grid">
+                    <div class="team-card">
+                        <div class="avatar">
+                            <img src="videos/homevideo/captain.jpg" alt="Captain Photo">
+                        </div>
+                        <h3>CAPTAIN</h3><span class="role">Капитан Команды</span>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">
+                             <img src="videos/homevideo/robot-dev.jpg" alt="Robot Dev Photo">
+                        </div>
+                        <h3>ROBOT DEV</h3><span class="role">Программист (GYRO)</span>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">
+                             <img src="videos/homevideo/project-dev.jpg" alt="Project Dev Photo">
+                        </div>
+                        <h3>PROJECT DEV</h3><span class="role">Ардуино/Веб</span>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">
+                             <img src="videos/homevideo/builder1.jpg" alt="Builder 1 Photo">
+                        </div>
+                        <h3>BUILDER 1</h3><span class="role">Главный Инженер</span>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">
+                             <img src="videos/homevideo/engineer.jpg" alt="Engineer Photo">
+                        </div>
+                        <h3>ENGINEER</h3><span class="role">Инженер</span>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">
+                             <img src="videos/homevideo/research.jpg" alt="Research Photo">
+                        </div>
+                        <h3>RESEARCH</h3><span class="role">Аналитик</span>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">
+                             <img src="videos/homevideo/design.jpg" alt="Design Photo">
+                        </div>
+                        <h3>DESIGN</h3><span class="role">Дизайнер</span>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">
+                             <img src="videos/homevideo/builder2.jpg" alt="Builder 2 Photo">
+                        </div>
+                        <h3>BUILDER 2</h3><span class="role">Конструктор</span>
+                    </div>
+                </div>
+                 </div>
+
+        </section>
+
+        <section id="project" class="tab-content">
+
+            <div class="container">
+                <h2 class="section-head">СИСТЕМА КЛИМАТ-КОНТРОЛЯ</h2>
+                <div class="project-showcase-grid">
+                    <div class="glass-box text-content">
+                        <h3>ПРОБЛЕМА</h3>
+                        <p>Музейные экспонаты (книги, ткани) разрушаются из-за перепадов влажности и температуры. Существующие системы слишком дорогие и громоздкие.</p>
+                        <h3>НАШЕ РЕШЕНИЕ</h3>
+                        <p>Компактный модуль RUMBLE. Он устанавливается в любую витрину, считывает данные и автоматически включает микровентиляцию для стабилизации среды.</p>
+                        <div class="tech-stack">
+                            <span>Arduino Uno</span> <span>DHT-22</span> <span>C++</span> <span>Relay</span>
+                        </div>
+                    </div>
+                    <div class="glass-box image-content main-photo">
+                        <img src="videos/projectvideo/device-photo.jpg" alt="Фото устройства" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                </div>
+
+                <div class="simulation-area">
+                    <div class="sim-card">
+                        <div class="sim-header">
+                            <span>СИМУЛЯЦИЯ ДАТЧИКА</span>
+                            <div class="live-dot"></div>
+                        </div>
+                        <div class="sim-display">
+                            <span id="currentTemp" class="temp-val">18.0</span>
+                            <span class="unit">°C</span>
+                        </div>
+                        <div class="sim-controls">
+                            <label>ЦЕЛЕВАЯ ТЕМПЕРАТУРА: <span id="targetDisplay">25</span>°C</label>
+                            <input type="range" min="10" max="40" value="25" id="tempSlider" class="tech-slider">
+                        </div>
+                        <div class="status-bar">
+                            <span id="statusText">СИСТЕМА В НОРМЕ</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 class="sub-head">ИНЖЕНЕРНЫЕ ДАННЫЕ</h3>
+                <div class="engineering-grid">
+                    <div class="glass-box schematic-box">
+                        <h4>СХЕМА ПОДКЛЮЧЕНИЯ</h4>
+                        <div class="placeholder-content">
+                            <span>⚡ ФОТО СХЕМЫ (Fritzing)</span>
+                        </div>
+                    </div>
+                    </div>
+                
+                <h3 class="sub-head">ИСХОДНЫЙ КОД (ARDUINO)</h3>
+                <div class="code-editor-window">
+                    <div class="window-bar">
+                        <div class="dots">
+                            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        </div>
+                        <span class="filename">controller.ino (Скриншоты)</span>
+                    </div>
+                    <div class="code-body">
+                        <img src="videos/projectvideo/arduinocode.jpg" alt="Скриншот кода Arduino">
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="robot" class="tab-content">
+            <div class="container">
+                <h2 class="section-head">РОБОТ И ИГРА</h2>
+                <div class="robot-hero">
+                    <div class="robot-info glass-box">
+                        <h3>ХАРАКТЕРИСТИКИ: ALPHA V3</h3>
+                        <ul>
+                            <li><strong>Мозг:</strong> SPIKE Prime Hub</li>
+                            <li><strong>Привод:</strong> 2 Больших мотора (Инвертированные)</li>
+                            <li><strong>Инструменты:</strong> 2 Средних мотора (Быстрая смена)</li>
+                            <li><strong>Датчики:</strong> Встроенный Гироскоп + 2 Цвета</li>
+                        </ul>
+                    </div>
+                    <div class="robot-photo-main">
+                        <img src="videos/robotvideo/robot-full.jpg" alt="Фото робота целиком" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                </div>
+
+                <h3 class="sub-head">СИСТЕМА НАСАДОК (8 ШТУК)</h3>
+                <div class="attachments-grid">
+                    <div class="attach-card glass-box">
+                        <div class="attach-img-wrapper">
+                            <img src="videos/robotvideo/m01-poster.jpg" alt="Lifter">
+                        </div>
+                        <h4>LIFTER</h4><p>Подъемник</p>
+                    </div>
+                    <div class="attach-card glass-box">
+                        <div class="attach-img-wrapper">
+                            <img src="videos/robotvideo/m02-poster.jpg" alt="Claw">
+                        </div>
+                        <h4>CLAW</h4><p>Захват</p>
+                    </div>
+                    <div class="attach-card glass-box">
+                        <div class="attach-img-wrapper">
+                             <img src="videos/robotvideo/m03-poster.jpg" alt="Pusher">
+                        </div>
+                        <h4>PUSHER</h4><p>Толкатель</p>
+                    </div>
+                    <div class="attach-card glass-box">
+                        <div class="attach-img-wrapper">
+                             <img src="videos/robotvideo/m04-poster.jpg" alt="Hook">
+                        </div>
+                        <h4>HOOK</h4><p>Крюк</p>
+                    </div>
+                    <div class="attach-card glass-box">
+                        <div class="attach-img-wrapper">
+                             <img src="videos/robotvideo/m05-poster.jpg" alt="Sensor">
+                        </div>
+                        <h4>SENSOR</h4><p>Датчик</p>
+                    </div>
+                    <div class="attach-card glass-box">
+                        <div class="attach-img-wrapper">
+                             <img src="videos/robotvideo/m06-poster.jpg" alt="Slider">
+                        </div>
+                        <h4>SLIDER</h4><p>Слайдер</p>
+                    </div>
+                    <div class="attach-card glass-box">
+                        <div class="attach-img-wrapper">
+                             <img src="videos/robotvideo/m07-poster.jpg" alt="Roller">
+                        </div>
+                        <h4>ROLLER</h4><p>Ролик</p>
+                    </div>
+                    <div class="attach-card glass-box">
+                        <div class="attach-img-wrapper">
+                             <img src="videos/robotvideo/m08-poster.jpg" alt="Dozer">
+                        </div>
+                        <h4>DOZER</h4><p>Ковш</p>
+                    </div>
+                </div>
+
+                <h3 class="sub-head">СТРАТЕГИЯ МИССИЙ (ВИДЕО)</h3>
+                <div class="missions-grid">
+                    <div class="mission-card video-mission">
+                        <div class="video-wrapper">
+                            <video controls poster="videos/robotvideo/m01-poster.jpg">
+                                <source src="videos/robotvideo/m01.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="mission-info">
+                            <div class="top-row"><span class="m-id">M01</span><span class="pts">60 Point</span></div>
+                            <h4>3D CINEMA</h4>
+                        </div>
+                    </div>
+                    <div class="mission-card video-mission">
+                        <div class="video-wrapper">
+                             <video controls poster="videos/robotvideo/m02-poster.jpg">
+                                <source src="videos/robotvideo/m02.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="mission-info">
+                            <div class="top-row"><span class="m-id">M02</span><span class="pts">90 Point</span></div>
+                            <h4>THEATER</h4>
+                        </div>
+                    </div>
+                    <div class="mission-card video-mission">
+                        <div class="video-wrapper">
+                             <video controls poster="videos/robotvideo/m03-poster.jpg">
+                                <source src="videos/robotvideo/m03.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="mission-info">
+                            <div class="top-row"><span class="m-id">M03</span><span class="pts">60 Point</span></div>
+                            <h4>IMMERSIVE</h4>
+                        </div>
+                    </div>
+                    <div class="mission-card video-mission">
+                        <div class="video-wrapper">
+                             <video controls poster="videos/robotvideo/m04-poster.jpg">
+                                <source src="videos/robotvideo/m04.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="mission-info">
+                            <div class="top-row"><span class="m-id">M04</span><span class="pts">60 Point</span></div>
+                            <h4>MASTERPIECE</h4>
+                        </div>
+                    </div>
+                     <div class="mission-card video-mission">
+                        <div class="video-wrapper">
+                             <video controls poster="videos/robotvideo/m05-poster.jpg">
+                                <source src="videos/robotvideo/m05.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="mission-info">
+                            <div class="top-row"><span class="m-id">M05</span><span class="pts">60 Point</span></div>
+                            <h4>IMMERSIVE</h4>
+                        </div>
+                    </div>
+                     <div class="mission-card video-mission">
+                        <div class="video-wrapper">
+                             <video controls poster="videos/robotvideo/m06-poster.jpg">
+                                <source src="videos/robotvideo/m06.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="mission-info">
+                            <div class="top-row"><span class="m-id">M06</span><span class="pts">70 Point</span></div>
+                            <h4>IMMERSIVE</h4>
+                        </div>
+                    </div>
+                     <div class="mission-card video-mission">
+                        <div class="video-wrapper">
+                             <video controls poster="videos/robotvideo/m07-poster.jpg">
+                                <source src="videos/robotvideo/m07.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="mission-info">
+                            <div class="top-row"><span class="m-id">M07</span><span class="pts">40 Point</span></div>
+                            <h4>IMMERSIVE</h4>
+                        </div>
+                    </div>
+                     <div class="mission-card video-mission">
+                        <div class="video-wrapper">
+                             <video controls poster="videos/robotvideo/m08-poster.jpg">
+                                <source src="videos/robotvideo/m08.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="mission-info">
+                            <div class="top-row"><span class="m-id">M08</span><span class="pts">25 Point</span></div>
+                            <h4>IMMERSIVE</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="process" class="tab-content">
+
+            <div class="container">
+                <h2 class="section-head">ИНЖЕНЕРНЫЙ ДНЕВНИК</h2>
+                <div class="timeline">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-item">
+                        <div class="date-badge">ЭТАП 1: АНАЛИЗ</div>
+                        <div class="content-box glass-box">
+                            <h3>Стратегия и Исследование</h3>
+                            <p>Мы проанализировали книгу правил FLL и поговорили с экспертами из музея, чтобы найти проблему.</p>
+                            <div class="gallery-mini">
+                                <div class="mini-img"><span>ФОТО ДОСКИ</span></div>
+                                <div class="mini-img"><span>ФОТО ЗАПИСЕЙ</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date-badge">ЭТАП 2: ПРОТОТИП</div>
+                        <div class="content-box glass-box">
+                            <h3>Сборка Шасси</h3>
+                            <p>Первый дизайн шасси из балок Technic. Мы протестировали 3 типа колес для лучшего сцепления.</p>
+                            <div class="gallery-mini">
+                                <div class="mini-img"><span>ФОТО ШАССИ V1</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="date-badge">ЭТАП 3: КОД</div>
+                        <div class="content-box glass-box">
+                            <h3>Программирование (PID)</h3>
+                            <p>Реализация ПИД-регулятора для плавного движения робота по линии без рывков.</p>
+                            <div class="code-snippet-mini">
+                                <code>error = target - sensor_val; turn = Kp * error;</code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

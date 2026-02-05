@@ -1,0 +1,249 @@
+/* =========================================
+   1. PROJECT LAYOUT (ПРЕЗЕНТАЦИЯ ПРОЕКТА)
+   ========================================= */
+.project-showcase-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.glass-box {
+    background: var(--glass);
+    border: var(--border);
+    border-radius: 16px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.text-content h3 {
+    font-family: var(--font-head);
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.text-content p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+/* Стек технологий (значки) */
+.tech-stack {
+    display: flex;
+    gap: 10px;
+}
+
+.tech-stack span {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-family: var(--font-code);
+    font-size: 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.image-content {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    border: 1px dashed var(--text-muted);
+}
+
+/* =========================================
+   2. ENGINEERING DATA (СХЕМЫ И МОДЕЛИ)
+   ========================================= */
+.sub-head {
+    font-family: var(--font-head);
+    font-size: 1.8rem;
+    margin: 60px 0 30px;
+    text-align: center;
+    color: var(--text-main);
+}
+
+.engineering-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.schematic-box,
+.model-box {
+    text-align: center;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.schematic-box h4,
+.model-box h4 {
+    margin-bottom: 20px;
+    font-family: var(--font-head);
+}
+
+/* =========================================
+   3. CODE EDITOR (СТИЛЬ VS CODE)
+   ========================================= */
+.code-editor-window {
+    background: #1e1e1e;
+    border-radius: 12px;
+    border: 1px solid #333;
+    overflow: hidden;
+    margin-bottom: 80px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* Верхняя панель окна */
+.window-bar {
+    background: #252526;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+/* Кнопки окна (светофор) */
+.dots {
+    display: flex;
+    gap: 8px;
+    margin-right: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.red {
+    background: #ff5f56;
+}
+
+.yellow {
+    background: #ffbd2e;
+}
+
+.green {
+    background: #27c93f;
+}
+
+.filename {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* Тело кода */
+.code-body {
+    padding: 30px;
+    overflow-x: auto;
+}
+
+.code-body pre {
+    font-family: var(--font-code);
+    color: #d4d4d4;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Подсветка синтаксиса */
+.keyword {
+    color: #569cd6;
+}
+
+.string {
+    color: #ce9178;
+}
+
+.comment {
+    color: #6a9955;
+}
+
+.func {
+    color: #dcdcaa;
+}
+
+.type {
+    color: #4ec9b0;
+}
+
+/* =========================================
+   4. SIMULATION (СИМУЛЯТОР ДАТЧИКА)
+   ========================================= */
+.simulation-area {
+    display: flex;
+    justify-content: center;
+}
+
+.sim-card {
+    background: var(--glass);
+    border: var(--border);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.sim-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 15px;
+}
+
+/* Мигающая точка */
+.live-dot {
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0 0 10px red;
+    animation: blink 1s infinite;
+}
+
+.sim-display {
+    font-family: var(--font-head);
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.tech-slider {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.status-bar {
+    font-family: var(--font-code);
+    color: #00ff88;
+    font-weight: bold;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+}
+
+/* =========================================
+   5. ANIMATIONS & MEDIA QUERIES
+   ========================================= */
+@keyframes blink {
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@media (max-width: 900px) {
+    .project-showcase-grid,
+    .engineering-grid {
+        grid-template-columns: 1fr;
+    }
+}

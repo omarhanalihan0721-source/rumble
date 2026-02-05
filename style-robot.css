@@ -1,0 +1,215 @@
+/* =========================================
+   ROBOT HERO SECTION
+   ========================================= */
+.robot-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.robot-info ul {
+    list-style: none;
+    margin-top: 20px;
+    padding: 0; /* Убрал стандартный отступ */
+}
+
+.robot-info li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-muted, #ccc); /* Fallback цвет */
+}
+
+.robot-info strong {
+    color: var(--accent, #00f0ff);
+    margin-right: 10px;
+}
+
+.robot-photo-main {
+    height: 400px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px dashed var(--text-muted, #555);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative; /* Важно для позиционирования */
+}
+
+.robot-photo-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   ATTACHMENTS GRID (НАСАДКИ С ФОТО)
+   ========================================= */
+   
+.attachments-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-bottom: 80px;
+}
+
+.attach-card {
+    background: var(--glass, rgba(255, 255, 255, 0.05)); /* Убедимся, что есть фон */
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+    overflow: hidden;
+    border-radius: 12px; /* Скругление самой карточки */
+}
+
+.attach-card:hover {
+    border-color: var(--accent, #00f0ff);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Обёртка для изображения насадки */
+.attach-img-wrapper {
+    height: 180px; 
+    width: 100%;
+    background: #222; /* Темный фон, если картинки нет - вы увидите черный квадрат */
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    display: flex; /* Центрируем содержимое */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Само изображение насадки */
+.attach-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block !important; /* Принудительно показываем */
+    transition: transform 0.3s ease;
+}
+
+/* Эффект увеличения фото при наведении на карточку */
+.attach-card:hover .attach-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.attach-card h4 {
+    font-family: var(--font-head, sans-serif);
+    color: var(--text-main, #fff);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+.attach-card p {
+    color: var(--text-muted, #aaa);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   MISSIONS GRID (ЗАДАНИЯ С ВИДЕО)
+   ========================================= */
+.missions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.mission-card.video-mission {
+    background: var(--glass, rgba(255, 255, 255, 0.05));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.mission-card:hover {
+    border-color: var(--accent, #00f0ff);
+    box-shadow: 0 5px 15px rgba(0, 240, 255, 0.1);
+}
+
+/* Обёртка для видео */
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    position: relative;
+}
+
+/* Настройки видео и постера (обложки) */
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Важно: растягивает и видео, и постер */
+    display: block;
+    outline: none;
+    background-size: cover; /* Для старых браузеров */
+}
+
+/* Блок с информацией под видео */
+.mission-info {
+    padding: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.m-id {
+    font-family: var(--font-head, sans-serif);
+    font-weight: 900;
+    color: var(--text-muted, #aaa);
+    font-size: 1.1rem;
+}
+
+.pts {
+    font-family: var(--font-code, monospace);
+    font-size: 0.85rem;
+    color: var(--accent, #00f0ff);
+    font-weight: bold;
+    background: rgba(0, 240, 255, 0.1);
+    padding: 3px 8px;
+    border-radius: 4px;
+}
+
+.mission-card h4 {
+    margin: 0;
+    font-family: var(--font-head, sans-serif);
+    font-size: 1rem;
+    text-align: left;
+    color: #fff;
+}
+
+/* --- МЕДИА-ЗАПРОСЫ --- */
+@media (min-width: 1100px) {
+    .missions-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 1099px) and (min-width: 769px) {
+    .robot-hero { grid-template-columns: 1fr; }
+    .attachments-grid { grid-template-columns: repeat(4, 1fr); }
+    .missions-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .robot-hero { grid-template-columns: 1fr; }
+    .attachments-grid { grid-template-columns: 1fr 1fr; gap: 15px; }
+    .attach-img-wrapper { height: 120px; }
+    .missions-grid { grid-template-columns: 1fr; }
+}
